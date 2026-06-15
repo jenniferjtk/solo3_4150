@@ -163,6 +163,16 @@ class _BrowseScreenState extends State<BrowseScreen> {
                         style: const TextStyle(color: Colors.red),
                       ),
                     ),
+                  if (!_loadingImage && _error == null && _imageUrl == null)
+                    const Expanded(
+                      child: Center(
+                        child: Text(
+                          'select a breed above and tap fetch a dog! 🐾',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(fontSize: 16, color: Colors.grey),
+                        ),
+                      ),
+                    ),
                   if (_imageUrl != null) ...[
                     ClipRRect(
                       borderRadius: BorderRadius.circular(12),

@@ -11,7 +11,7 @@ import 'package:dog_breed_diary/main.dart';
 
 void main() {
   testWidgets('App smoke test', (WidgetTester tester) async {
-    await tester.pumpWidget(const DogBreedDiaryApp(isDarkMode: false));
+    await tester.pumpWidget(const DogBreedDiaryApp());
     expect(find.text('🐶 Dog Breed Diary'), findsOneWidget);
   });
 }

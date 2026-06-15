@@ -2,29 +2,30 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/browse_screen.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  final prefs = await SharedPreferences.getInstance();
-  final isDarkMode = prefs.getBool('isDarkMode') ?? false;
-  runApp(DogBreedDiaryApp(isDarkMode: isDarkMode));
+void main() {
+  runApp(const DogBreedDiaryApp());
 }
 
 class DogBreedDiaryApp extends StatefulWidget {
-  final bool isDarkMode;
-
-  const DogBreedDiaryApp({super.key, required this.isDarkMode});
+  const DogBreedDiaryApp({super.key});
 
   @override
   State<DogBreedDiaryApp> createState() => _DogBreedDiaryAppState();
 }
 
 class _DogBreedDiaryAppState extends State<DogBreedDiaryApp> {
-  late bool _isDarkMode;
+  bool _isDarkMode = false;
 
   @override
   void initState() {
     super.initState();
-    _isDarkMode = widget.isDarkMode;
+    _loadTheme();
+  }
+
+  // read theme preference on startup
+  Future<void> _loadTheme() async {
+    final prefs = await SharedPreferences.getInstance();
+    setState(() => _isDarkMode = prefs.getBool('isDarkMode') ?? false);
   }
 
   // save theme preference and update ui
