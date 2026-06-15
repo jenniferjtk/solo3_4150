@@ -100,3 +100,9 @@ If the user taps the fetch button without selecting a breed from the dropdown, `
 **2. Empty caption when saving**
 
 If the user taps **Save to diary** without entering a caption, the app substitutes the string `"no caption"` rather than storing an empty string. This ensures the caption field in the database is never blank and the diary card always displays readable text.
+
+---
+
+## AI Assistance
+
+This app was developed with the help of [Claude](https://claude.ai) (Anthropic's AI assistant) and [Claude Code](https://claude.ai/code) (Anthropic's AI-powered CLI for software engineering tasks).
