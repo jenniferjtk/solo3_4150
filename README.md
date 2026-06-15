@@ -95,7 +95,7 @@ No API keys or additional configuration are required.
 
 **1. No breed selected when tapping "Fetch a dog!"**
 
-If the user taps the fetch button without selecting a breed from the dropdown, `_selectedBreed` is `null` and the `_fetchImage()` method returns immediately with no action. No network request is made and no error is shown — the button is simply a no-op until a breed is chosen.
+If the user taps the fetch button without selecting a breed from the dropdown, `_selectedBreed` is `null` and the `_fetchImage()` method returns immediately with no action. No network request is made and no error is shown the button is simply a no-op until a breed is chosen.
 
 **2. Empty caption when saving**
 
