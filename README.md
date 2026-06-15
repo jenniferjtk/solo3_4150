@@ -105,4 +105,6 @@ If the user taps **Save to diary** without entering a caption, the app substitut
 
 ## AI Assistance
 
-This app was developed with the help of [Claude](https://claude.ai) (Anthropic's AI assistant) and [Claude Code](https://claude.ai/code) (Anthropic's AI-powered CLI for software engineering tasks).
+I used Claude (claude.ai) to help plan the app structure, generate the initial code files, 
+and debug compile errors. I used Claude Code to make targeted fixes to specific files 
+without breaking existing functionality. All code was reviewed and tested manually.
